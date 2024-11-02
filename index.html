@@ -12,16 +12,38 @@
   </header>
   <main>
     <section></section>
-    <h2>Add Employee:</h2>
+    <h2>Add Employee</h2>
     <!-- form element is section that has interactive controls for submitting information -->
     <form>
     <!-- placeholder is to keep desired text in the form text will be the input -->
     <input id="firstNameInput" placeholder="First Name" type="text">
     <input id="lastNameInput" placeholder="Last Name" type="text">
-
-
+    <input id="idInput" placeholder="Employee ID" type="text">
+    <input id="titleInput" placeholder="Title" type="text">
+    <input id="annualSalaryInput" placeholder="Annual Salary" type="text">
+    <!-- button element will be an activatable element -->
+    <button onClick="submitButton">Submit</button>
     </form>
     <h2>Employees</h2>
+    <table id="employees">
+      <!-- thead is the head of the table -->
+      <thead>
+        <!-- tr defines a row of cells in a table -->
+         <tr>
+          <!-- th header cell elements -->
+           <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee Id</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+         </tr>
+
+
+      </thead>
+
+
+
+    </table>
   </main>
   <footer>
     <p>Total Monthly</p>
