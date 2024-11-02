@@ -19,4 +19,3 @@ function addEmployee(event){
     const firstName=document.getElementById('#firstNameInput').value;
   
 }
-addEmployee()
