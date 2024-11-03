@@ -6,6 +6,8 @@ function addEmployee(event){
   event.preventDefault();
     // need to create five variables to take in the data for the employee
     //document accesses the html. get elementById will grab that specific Id 
+  //?Had trouble with some syntax here. the .getElementById I thought would need a # in front of Labels
+  //? I kept getting null so I knew I was close to getting them to the dom.
     let firstName=document.getElementById("firstNameInput").value;
     let lastName=document.getElementById("lastNameInput").value;
     let employeeId=document.getElementById("idInput").value;
@@ -29,7 +31,7 @@ function addEmployee(event){
     ${title}
     </td>
     <td>
-    ${annualSalary}
+    $${annualSalary}
     </td>
 <tr>
 `;
