@@ -16,18 +16,19 @@ function addEmployee(event){
   event.preventDefault();
     // need to create five variables to take in the data for the employee
     //document accesses the html. get elementById will grab that specific Id 
-    let firstName=document.querySelector("#firstNameInput");
-    let lastName=document.querySelector("#lastNameInput");
-    let employeeId=document.querySelector("#idInput");
-    let title=document.querySelector("#titleInput");
-    let annualSalary=document.querySelector("#annualSalaryInput");
+    let firstName=document.getElementById("#firstNameInput");
+    let lastName=document.getElementById("#lastNameInput");
+    let employeeId=document.getElementById("#idInput");
+    let title=document.getElementById("#titleInput");
+    let annualSalary=document.getElementById("#annualSalaryInput");
     let tableBody=document.querySelector("#employees tbody");
 
 //This is template for adding employee
   tableBody.innerHTML += `
 <tr>
     <td>
-     ${firstName}
+    something 
+    ${firstName}
     </td>
     <td>
     ${lastName}
@@ -44,28 +45,3 @@ function addEmployee(event){
 <tr>
 `;
 }
-// function addAffirmation(event) {
-
-//     // Stop default behavior of refreshing the page when there's a button elem inside a form element
-//     event.preventDefault();
-  
-//     // Get the inputs and table
-//     const affirmation = document.querySelector("#affirmationInput").value;
-//     const author = document.querySelector("#authorInput").value;
-//     let tableBody = document.querySelector("#affirmationList tbody");
-  
-//     // Add the new affirmation to the table
-//     tableBody.innerHTML += `
-//       <tr>
-//         <td>
-//           ${affirmation}
-//         </td>
-//         <td>
-//           ${author}
-//         </td>
-//         <td>
-//           <button onClick="deleteAffirmation(event)">Delete</button>
-//         </td>
-//       </tr>
-//     `;
-//   }
