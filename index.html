@@ -11,20 +11,22 @@
     <h1>Salary Calculator</h1>
   </header>
   <main>
-    <section></section>
+  <section>
     <h2>Add Employee</h2>
     <!-- form element is section that has interactive controls for submitting information -->
     <form>
     <!-- placeholder is to keep desired text in the form text will be the input -->
-    <input data-testid="firstNameInput" placeholder="First Name" type="text">
-    <input data-testid="lastNameInput" placeholder="Last Name" type="text">
-    <input data-testid="idInput" placeholder="Employee ID" type="text">
-    <input data-testid="titleInput" placeholder="Title" type="text">
-    <input data-testid="annualSalaryInput" placeholder="Annual Salary" type="number">
+      <input data-testid="firstNameInput" placeholder="First Name" type="text">
+      <input data-testid="lastNameInput" placeholder="Last Name" type="text">
+      <input data-testid="idInput" placeholder="Employee ID" type="text">
+      <input data-testid="titleInput" placeholder="Title" type="text">
+      <input data-testid="annualSalaryInput" placeholder="Annual Salary" type="number">
     <!-- button element will be an activatable element -->
-    <button data-testid="submitButton">
-      Submit
-    </button>    </form>
+      <button onClick="submitButton(event)" >Submit</button>    
+    </form>
+  </section>
+    <!-- <button onClick="addBlock('red')" id="red-btn">Red</button>  -->
+  <section >
     <h2>Employees</h2>
     <table id="employees">
       <!-- thead is the head of the table -->
@@ -37,16 +39,13 @@
             <th>Employee Id</th>
             <th>Title</th>
             <th>Annual Salary</th>
-         </tr>
+         </tr>  
       </thead>
       <tbody>
 
-      </tbody>
-      <body>
-        <!-- This is where employee data will be when submitted and sent to the dom -->
-        
-      </body>
-    </table>
+      </tbody>     
+    </table>  
+  </section>
   </main>
   <footer>
     <p>Total Monthly</p>
