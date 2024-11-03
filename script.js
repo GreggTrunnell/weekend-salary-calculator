@@ -8,11 +8,11 @@ function addEmployee(event){
     //document accesses the html. get elementById will grab that specific Id 
   //?Had trouble with some syntax here. the .getElementById I thought would need a # in front of Labels
   //? I kept getting null so I knew I was close to getting them to the dom.
-    let firstName=document.getElementById("firstNameInput").value;
-    let lastName=document.getElementById("lastNameInput").value;
-    let employeeId=document.getElementById("idInput").value;
-    let title=document.getElementById("titleInput").value;
-    let annualSalary=document.getElementById("annualSalaryInput").value;
+    let firstName=document.querySelector("#firstNameInput").value;
+    let lastName=document.querySelector("#lastNameInput").value;
+    let employeeId=document.querySelector("#idInput").value;
+    let title=document.querySelector("#titleInput").value;
+    let annualSalary=document.querySelector("#annualSalaryInput").value;
   //changed to querySelector to try and remeber how quesel and getElemid work  
     let tableBody=document.querySelector("#employees tbody");
 
@@ -51,5 +51,7 @@ function deleteEmployee(event){
     //will need to use .target to target an element that was added to dom when calling addEmployee
     event.target.parentNode.parentNode.remove();
 }//end of deleteEmployee function
+
+
 
 
