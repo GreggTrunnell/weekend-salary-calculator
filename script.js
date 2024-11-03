@@ -44,6 +44,17 @@ document.getElementById("employeeForm").reset();
 //when adding the new salary input it will need to access the element that was 
 //"pushed" into html tbody
 console.log(annualSalary)
+
+//Code for accessing css using js for over-budget
+//!(will need to be calculated by month)
+//if statement to check if monthly budget is over 20000
+//need a variable to retrieve the annualSalary element
+let totalSalary= document.querySelector("#annualSalary")
+if (annualSalary>20000){
+  totalSalary.classList.remove("over-budget");}
+    else {
+      totalSalary.classList.add("over-budget")
+    }
 }//end of addEmployee function
 
 //delete will be an action that someone activates so we need event
@@ -51,6 +62,7 @@ function deleteEmployee(event){
     //will need to use .target to target an element that was added to dom when calling addEmployee
     event.target.parentNode.parentNode.remove();
 }//end of deleteEmployee function
+
 
 
 
