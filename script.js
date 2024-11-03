@@ -49,12 +49,15 @@ console.log(annualSalary)
 //!(will need to be calculated by month)
 //if statement to check if monthly budget is over 20000
 //need a variable to retrieve the annualSalary element
-let totalSalary= document.querySelector("#annualSalary")
-if (annualSalary>20000){
-  totalSalary.classList.remove("over-budget");}
-    else {
-      totalSalary.classList.add("over-budget")
-    }
+let totalSalary= document.querySelector("#annualSalaryInput")
+// if (annualSalary>20000){
+//   totalSalary.classList.add(".over-budget");
+//   totalSalary.classList.remove("footer");
+// } else {
+//       totalSalary.classList.add("footer");
+//       totalSalary.classList.remove(".over-budget")
+//     }
+console.log(totalSalary)
 }//end of addEmployee function
 
 //delete will be an action that someone activates so we need event

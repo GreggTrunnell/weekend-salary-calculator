@@ -46,7 +46,7 @@ body {
   
   
   /* FORM ELEMENTS */
-  input {
+  input{
     padding: .5em;
     width: 150px;
     background: #FCFCFC;
@@ -82,8 +82,13 @@ body {
   tbody tr:nth-child(even){
     background: #dcdcdc;
   }
-  
-  .over-budget{
+  footer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .over-budget{
       background-color: red
       ;
-  }
+  } */
