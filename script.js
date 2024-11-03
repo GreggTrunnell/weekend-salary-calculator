@@ -13,6 +13,7 @@ function addEmployee(event){
     let employeeId=document.getElementById("idInput").value;
     let title=document.getElementById("titleInput").value;
     let annualSalary=document.getElementById("annualSalaryInput").value;
+  //changed to querySelector to try and remeber how quesel and getElemid work  
     let tableBody=document.querySelector("#employees tbody");
 
 //This is template for adding employee
@@ -36,4 +37,6 @@ function addEmployee(event){
 <tr>
 `;
 document.getElementById("employeeForm").reset();
+console.log(annualSalaryInput)
 }
+console.log(annualSalaryInput)
