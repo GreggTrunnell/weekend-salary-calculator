@@ -34,9 +34,22 @@ function addEmployee(event){
     <td>
     $${annualSalary}
     </td>
+    <td>
+    <button onClick="deleteEmployee(event)" id="deleteButton">Delete</button>
+    </td>
 <tr>
 `;
 document.getElementById("employeeForm").reset();
-console.log(annualSalaryInput)
-}
-console.log(annualSalaryInput)
+
+//when adding the new salary input it will need to access the element that was 
+//"pushed" into html tbody
+console.log(annualSalary)
+}//end of addEmployee function
+
+//delete will be an action that someone activates so we need event
+function deleteEmployee(event){
+    //will need to use .target to target an element that was added to dom when calling addEmployee
+    event.target.parentNode.parentNode.remove();
+}//end of deleteEmployee function
+
+
