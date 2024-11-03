@@ -35,4 +35,5 @@ function addEmployee(event){
     </td>
 <tr>
 `;
+document.getElementById("employeeForm").reset();
 }
