@@ -49,16 +49,16 @@ console.log(annualSalary)
 //!(will need to be calculated by month)
 //if statement to check if monthly budget is over 20000
 //need a variable to retrieve the annualSalary element
-let totalSalary= document.querySelector("#annualSalaryInput")
-// if (annualSalary>20000){
+// let totalSalary= document.querySelector("#annualSalaryInput")
+// if ("#annualSalaryInput">20000){
 //   totalSalary.classList.add(".over-budget");
 //   totalSalary.classList.remove("footer");
 // } else {
 //       totalSalary.classList.add("footer");
 //       totalSalary.classList.remove(".over-budget")
 //     }
-console.log(totalSalary)
-}//end of addEmployee function
+// console.log(totalSalary)
+}//*end of addEmployee function
 
 //delete will be an action that someone activates so we need event
 function deleteEmployee(event){
@@ -66,6 +66,18 @@ function deleteEmployee(event){
     event.target.parentNode.parentNode.remove();
 }//end of deleteEmployee function
 
+//Adding salary function will need to target 
+let salaryTotal=document.querySelector("#monthlyTotal").value;
+//let annualSalary=document.querySelector("#annualSalaryInput").value;
+// function addingSalary(event){
+//}end of adding salary function
+footer.innerHTML += `
+<footer>
+  ${salaryTotal}
+  </footer>
+`
+
+console.log(salaryTotal)
 
 
 

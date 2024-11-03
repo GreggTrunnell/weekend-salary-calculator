@@ -33,7 +33,7 @@ body {
   }
   
   
-  /* HEADER/FOOTER */
+  /* HEADER */
   header, footer {
     height: 100%;
     display: flex;
@@ -82,13 +82,15 @@ body {
   tbody tr:nth-child(even){
     background: #dcdcdc;
   }
+  
+  /* Footer */
   footer{
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  /* .over-budget{
+  .over-budget{
       background-color: red
       ;
-  } */
+  }

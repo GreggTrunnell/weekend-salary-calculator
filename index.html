@@ -20,7 +20,7 @@
       <input data-testid="lastNameInput" id="lastNameInput" placeholder="Last Name" type="text">
       <input data-testid="idInput" id="idInput" placeholder="Employee ID" type="text">
       <input data-testid="titleInput" id="titleInput" placeholder="Title" type="text">
-      <input data-testid="annualSalaryInput" id="annualSalaryInput" placeholder="Annual Salary" type="text">
+      <input data-testid="annualSalaryInput" id="annualSalaryInput" placeholder="Annual Salary" type="number">
     <!-- button element will be an activatable element -->
       <button onClick="addEmployee(event)" data-testid="submitButton" id="submitButton">Submit</button> 
       <!-- <button onClick="addBlock('red')" id="red-btn">Red</button>    -->
@@ -51,8 +51,14 @@
   </main>
   <footer class="over-budget">
     <p> Monthly Total</p>
-
-    <!-- <p>Added total</p> -->
+    <input id="monthlyTotal" placeholder="0" type="number">
+    <thed>
+      <tr>
+        <th>
+          
+        </th>
+      </tr>
+    </thed>
   </footer>
 </body>
 </html>
