@@ -1,14 +1,4 @@
 
-// Write function to add affirmations to list in HTML table
-// function addAffirmation(event) {
-
-//     // Stop default behavior of refreshing the page when there's a button elem inside a form element
-//     event.preventDefault();
-  
-//     // Get the inputs and table
-//     const affirmation = document.querySelector("#affirmationInput").value;
-//     const author = document.querySelector("#authorInput").value;
-//     let tableBody = document.querySelector("#affirmationList tbody");
 
 //use event because some one is activating the event
 function addEmployee(event){
@@ -16,18 +6,17 @@ function addEmployee(event){
   event.preventDefault();
     // need to create five variables to take in the data for the employee
     //document accesses the html. get elementById will grab that specific Id 
-    let firstName=document.getElementById("#firstNameInput");
-    let lastName=document.getElementById("#lastNameInput");
-    let employeeId=document.getElementById("#idInput");
-    let title=document.getElementById("#titleInput");
-    let annualSalary=document.getElementById("#annualSalaryInput");
+    let firstName=document.getElementById("firstNameInput").value;
+    let lastName=document.getElementById("lastNameInput").value;
+    let employeeId=document.getElementById("idInput").value;
+    let title=document.getElementById("titleInput").value;
+    let annualSalary=document.getElementById("annualSalaryInput").value;
     let tableBody=document.querySelector("#employees tbody");
 
 //This is template for adding employee
   tableBody.innerHTML += `
 <tr>
     <td>
-    something 
     ${firstName}
     </td>
     <td>
