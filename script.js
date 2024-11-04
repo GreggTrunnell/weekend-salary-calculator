@@ -13,7 +13,8 @@ function addEmployee(event){
     let employeeId=document.querySelector("#idInput").value;
     let title=document.querySelector("#titleInput").value;
     let annualSalary=document.querySelector("#annualSalaryInput").value;
-  //changed to querySelector to try and remeber how quesel and getElemid work  
+
+    //changed to querySelector to try and remeber how quesel and getElemid work  
     let tableBody=document.querySelector("#employees tbody");
 
 //This is template for adding employee
@@ -39,25 +40,8 @@ function addEmployee(event){
     </td>
 <tr>
 `;
+
 document.getElementById("employeeForm").reset();
-
-//when adding the new salary input it will need to access the element that was 
-//"pushed" into html tbody
-console.log(annualSalary)
-
-//Code for accessing css using js for over-budget
-//!(will need to be calculated by month)
-//if statement to check if monthly budget is over 20000
-//need a variable to retrieve the annualSalary element
-// let totalSalary= document.querySelector("#annualSalaryInput")
-// if ("#annualSalaryInput">20000){
-//   totalSalary.classList.add(".over-budget");
-//   totalSalary.classList.remove("footer");
-// } else {
-//       totalSalary.classList.add("footer");
-//       totalSalary.classList.remove(".over-budget")
-//     }
-// console.log(totalSalary)
 }//*end of addEmployee function
 
 //delete will be an action that someone activates so we need event
@@ -66,18 +50,27 @@ function deleteEmployee(event){
     event.target.parentNode.parentNode.remove();
 }//end of deleteEmployee function
 
-//Adding salary function will need to target 
-let salaryTotal=document.querySelector("#monthlyTotal").value;
-//let annualSalary=document.querySelector("#annualSalaryInput").value;
-// function addingSalary(event){
-//}end of adding salary function
-footer.innerHTML += `
-<footer>
-  ${salaryTotal}
-  </footer>
-`
+//Will need to Monthly total. We need to start at 0 and then add to it
+const totalMonthlySalary=0;
+//Will need to /12 to turn annualSalary into monthlySalary
 
-console.log(salaryTotal)
+
+
+
+//created global var called totalMonthlyCost
+//// Code for accessing css using js for over-budget
+// !(will need to be calculated by month)
+// if statement to check if monthly budget is over 20000
+// need a variable to retrieve the annualSalary element
+//  let totalSalary= document.querySelector("#annualSalaryInput").value;
+//  if ("#annualSalaryInput">20000){
+//    totalSalary.classList.add(".over-budget");
+//    totalSalary.classList.remove("footer");
+//  } else {
+//        totalSalary.classList.add("footer");
+//       totalSalary.classList.remove(".over-budget")
+//      }
+//  console.log(totalSalary)
 
 
 
