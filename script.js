@@ -48,13 +48,14 @@ let monthlyBudget = document.querySelector("#totalMonthly");
 monthlyBudget.textContent+=`
 $${totalMonthly}
 `;
-console.log(totalMonthly+=monthlyBudget);
 
-if ("#totalMonthly">20000){
-  totalSalary.classList.add(".over-budget");  
-} else { 
-     totalSalary.classList.remove(".over-budget")
-    }
+//document.querySelector("footer p") takes value from footer's p's element
+let totalMonthlyBudget=document.querySelector("footer p")
+//document.querySelector("footer p").textContent will take the value stored and add the
+//incoming total monthly
+document.querySelector("footer p").textContent = "Total Monthley Budget: $"+totalMonthly
+
+totalMonthlyBudget;
  
 document.getElementById("employeeForm").reset();
 }//*end of addEmployee function
@@ -66,16 +67,19 @@ function deleteEmployee(event){
     event.target.parentNode.parentNode.remove();
 }//*end of deleteEmployee function
 
- if ("#totalMonthly">20000){
-   totalSalary.classList.add(".over-budget");  
- } else { 
-      totalSalary.classList.remove(".over-budget")
-     }
+// if (totalMonthly > 20000){
+//   footer.classList.add(".over-budget");  
+// } else { 
+//   footer.classList.remove(".over-budget")
+//     }
+
+//  if ("#totalMonthly">20000){
+//    totalSalary.classList.add(".over-budget");  
+//  } else { 
+//       totalSalary.classList.remove(".over-budget")
+//      }
  
 
 
-// //Will need to Monthly total. We need to start at 0 and then add to it
-// const totalMonthlySalary=0;
-// //Will need to /12 to turn annualSalary into monthlySalary
-// const monthlySalary= annualSalary /12
+
 
