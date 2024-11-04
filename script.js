@@ -43,18 +43,21 @@ function addEmployee(event){
 `;
 
 
- totalMonthly+=annualSalary /12;
+totalMonthly+=annualSalary /12;
 let monthlyBudget = document.querySelector("#totalMonthly");
 monthlyBudget.textContent+=`
 $${totalMonthly}
-`
+`;
+console.log(totalMonthly+=monthlyBudget);
 
-
+if ("#totalMonthly">20000){
+  totalSalary.classList.add(".over-budget");  
+} else { 
+     totalSalary.classList.remove(".over-budget")
+    }
+ 
 document.getElementById("employeeForm").reset();
 }//*end of addEmployee function
-
-
-
 
 
 //delete will be an action that someone activates so we need event
@@ -63,28 +66,16 @@ function deleteEmployee(event){
     event.target.parentNode.parentNode.remove();
 }//*end of deleteEmployee function
 
+ if ("#totalMonthly">20000){
+   totalSalary.classList.add(".over-budget");  
+ } else { 
+      totalSalary.classList.remove(".over-budget")
+     }
+ 
+
+
 // //Will need to Monthly total. We need to start at 0 and then add to it
 // const totalMonthlySalary=0;
 // //Will need to /12 to turn annualSalary into monthlySalary
 // const monthlySalary= annualSalary /12
-
-
-
-//created global var called totalMonthlyCost
-//// Code for accessing css using js for over-budget
-// !(will need to be calculated by month)
-// if statement to check if monthly budget is over 20000
-// need a variable to retrieve the annualSalary element
-//  let totalSalary= document.querySelector("#annualSalaryInput").value;
-//  if ("#annualSalaryInput">20000){
-//    totalSalary.classList.add(".over-budget");
-//    totalSalary.classList.remove("footer");
-//  } else {
-//        totalSalary.classList.add("footer");
-//       totalSalary.classList.remove(".over-budget")
-//      }
-//  console.log(totalSalary)
-
-
-
 
