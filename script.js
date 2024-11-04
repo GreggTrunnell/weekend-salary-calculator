@@ -40,20 +40,29 @@ function addEmployee(event){
     </td>
 <tr>
 `;
+let totalMonthly=annualSalary /12;
+let monthlyBudget = document.querySelector("#totalMonthly");
+monthlyBudget.textContent+=`
+$${totalMonthly}
+`
 
 document.getElementById("employeeForm").reset();
 }//*end of addEmployee function
 
-//delete will be an action that someone activates so we need event
-function deleteEmployee(event){
-    //will need to use .target to target an element that was added to dom when calling addEmployee
-    event.target.parentNode.parentNode.remove();
-}//end of deleteEmployee function
 
-//Will need to Monthly total. We need to start at 0 and then add to it
-const totalMonthlySalary=0;
-//Will need to /12 to turn annualSalary into monthlySalary
 
+
+
+// //delete will be an action that someone activates so we need event
+// function deleteEmployee(event){
+//     //will need to use .target to target an element that was added to dom when calling addEmployee
+//     event.target.parentNode.parentNode.remove();
+// }//end of deleteEmployee function
+
+// //Will need to Monthly total. We need to start at 0 and then add to it
+// const totalMonthlySalary=0;
+// //Will need to /12 to turn annualSalary into monthlySalary
+// const monthlySalary= annualSalary /12
 
 
 
