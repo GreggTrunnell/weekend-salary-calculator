@@ -4,7 +4,9 @@ let totalMonthly=0;
 //use event because some one is activating the event
 function addEmployee(event){
     // Stop default behavior of refreshing the page when there's a button elem inside a form element
-  event.preventDefault();
+  //!prevent defualt isn't needed unless in <form>
+    event.preventDefault();
+
     // need to create five variables to take in the data for the employee
     //document accesses the html. get elementById will grab that specific Id 
   //?Had trouble with some syntax here. the .getElementById I thought would need a # in front of Labels
@@ -17,6 +19,10 @@ function addEmployee(event){
 
     //changed to querySelector to try and remeber how quesel and getElemid work  
     let tableBody=document.querySelector("#employees tbody");
+
+    // //this is a way to console.log all the selectors
+    // let tempArrayInputs =[firstName, lastName, employeeId];
+    // console.log(tempArrayInputs);
 
 //This is template for adding employee
   tableBody.innerHTML += `
@@ -53,33 +59,38 @@ $${totalMonthly}
 let totalMonthlyBudget=document.querySelector("footer p")
 //document.querySelector("footer p").textContent will take the value stored and add the
 //incoming total monthly
-document.querySelector("footer p").textContent = "Total Monthley Budget: $"+totalMonthly
+document.querySelector("footer p").textContent = "Total Monthley Budget: $"+totalMonthly.toFixed(2);
 
 totalMonthlyBudget;
- 
+
+//if else statement to call over-budget
+if (totalMonthly > 20000) {
+const footer=document.querySelector('footer')
+footer.classList.add("over-budget")
+
+}
 document.getElementById("employeeForm").reset();
 }//*end of addEmployee function
 
 
-//delete will be an action that someone activates so we need event
+      //delete will be an action that someone activates so we need event
 function deleteEmployee(event){
     //will need to use .target to target an element that was added to dom when calling addEmployee
     event.target.parentNode.parentNode.remove();
 }//*end of deleteEmployee function
 
-// if (totalMonthly > 20000){
-//   footer.classList.add(".over-budget");  
-// } else { 
-//   footer.classList.remove(".over-budget")
-//     }
+// if (totalMonthlyBudget  > 20000){
+//   foooter.classList.add("over-budget");  
+//   }  else { foooter.classList.remove("over-budget")
+// }
 
 //  if ("#totalMonthly">20000){
-//    totalSalary.classList.add(".over-budget");  
+//   totalMonthlyBudget.classList.add(".over-budget");  
 //  } else { 
-//       totalSalary.classList.remove(".over-budget")
+//   totalMonthlyBudget.classList.remove(".over-budget")
 //      }
  
-
+//
 
 
 

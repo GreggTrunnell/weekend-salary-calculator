@@ -45,24 +45,10 @@ body {
   }
   
   
-  /* FORM ELEMENTS */
-  input{
-    padding: .5em;
-    width: 150px;
-    background: #FCFCFC;
-    border: 1px solid;
-  }
-  button {
-    padding: .5em;
-    width: 75px;
-  }
-  
+
   
   /* TABLE */
-  table {
-    width: 100%;
-    text-align: left;
-  }
+
   table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -90,7 +76,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-  /* .over-budget{
+  .over-budget{
       background-color: red
       ;
-  } */
+  }
